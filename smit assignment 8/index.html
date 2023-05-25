@@ -8,14 +8,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div><p id="para">Hello world</p> </div>
-
-  <div>
+<div class="maindiv">
+  <div class="toolBar">
     <button onclick="bold()">bold</button>
     <button onclick="italic()">italic</button>
     <button onclick="underLine()">underline</button>
-    <input type="color" id="colorInput" onchange="changeTextColor()">
+    <input class="input-clr" type="color" id="colorInput" onchange="changeTextColor()">
     <select name="size" id="size" onchange="changeFontSize()">
       <option value="16">16px</option>
       <option value="18">18px</option>
@@ -26,8 +24,16 @@
       <option value="38">38px</option>
       <option value="42">42px</option>
     </select>
+    <section>
+      
+    </section>
   </div>
-  
+  <div class="main" >
+     <textarea name="" id="textarea-2" cols="30" rows="5"></textarea> 
+  </div>
+
+
+</div>
 
 
   <script src="app.js"></script>

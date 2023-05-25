@@ -1,29 +1,51 @@
+var flag = false
 function bold(){
-    var para = document.getElementById("para")
-    if(true){
-    para.style.fontWeight= "bold"}
-    else{para.style.fontWeight= "lighter"}
+    var textarea = document.getElementById("textarea-2");
+
+    if(flag){
+        textarea.style.fontWeight= "bold"
+    flag = false
+}
+else{
+    textarea.style.fontWeight= "normal"
+    flag = true
+}
     
 }
 function italic(){
-    var para = document.getElementById("para")
-    para.style.fontStyle = "italic"
+    var textarea = document.getElementById("textarea-2")
+    if(flag){
+        textarea.style.fontStyle = "italic"
+        flag = false
+    }else{
+        textarea.style.fontStyle = "normal"
+     flag = true
+
+    }
 }
 
 function underLine(){
-    var para = document.getElementById("para")
-    para.style.textDecoration = "underLine"
+    var textarea = document.getElementById("textarea-2")
+    if(flag){
+            textarea.style.textDecoration = "underLine"
+            flag = false
+    }else{
+            textarea.style.textDecoration = "none"
+            flag = true
+
+    }
+
 }
 function changeTextColor() {
-    var para = document.getElementById("para");
+    var textarea = document.getElementById("textarea-2");
     var colorInput = document.getElementById("colorInput").value;
-    para.style.color = colorInput;
+    textarea.style.color = colorInput;
 }
 
 
 function changeFontSize() {
     var select = document.getElementById("size");
-    var para = document.getElementById("para");
+    var textarea = document.getElementById("textarea-2");
     var selectedSize = select.value;
-    para.style.fontSize = selectedSize + "px";
+    textarea.style.fontSize = selectedSize + "px";
   }
